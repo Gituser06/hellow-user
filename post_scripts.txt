@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sudo su -
+yum update -y
+yum install vim wget
+wget https://pkg.jenkins.io/redhat-stable/jenkins-2.138.2-1.1.noarch.rpm
+yum install java-1.8.0-openjdk -y
+rpm -ivh jenkins-2.138.2-1.1.noarch.rpm
+service start jenkins
+chkconf jenkins on
